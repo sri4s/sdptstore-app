@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.err{
+    color: rgba(212, 39, 39, 0.705);
+}
+.form-control, select {
+    height: 55px;
+    border-color: #575050 !important;
+    border-radius: 4px !important;
+    color: #5c3939 !important;
+}

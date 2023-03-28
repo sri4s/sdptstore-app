@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-3">
+            <h4 class="text-center mt-4 mb-2">Add Product</h4>
+            <form [formGroup]="addForm" (ngSubmit)="addproduct()">
+                <div class="mb-3 mt-3">
+                    <label for="Product_name" class="form-label"> Product Name </label>
+                    <input type="text" class="form-control" id="Product_name" formControlName="Product_name" placeholder="Enter Product Name">
+                    <label class="err" *ngIf="(addformcontrols.Product_name.touched || isSB) && addformcontrols.Product_name.errors">Product Name is Required</label>
+                </div>
+
+                <div class="mb-3 mt-3">
+                <label for="category" class="form-label">category </label>
+                <select class="form-select" formControlName="category" id="category" aria-label="Default select example">
+                    <option [selected]="true">Select Category</option>
+                    <option value="temple">Temple</option>
+                    <option value="electanics">Electanics</option>
+                    <option value="hardware">Hardware</option>
+                    <option value="kirana">Kirana</option>
+                    <option value="mart">Mart</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="milk_product">Milk Product</option>
+                    <option value="fruits_stall">fruits stall</option>
+                    <option value="icecream_store">Icecream store</option>
+                    <option value="restarent">Restarent</option>
+                    <option value="other">other</option>
+                </select>
+                <label class="err" *ngIf="(addformcontrols.category.touched || isSB) && addformcontrols.category.errors">Category is Required</label>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" formControlName="location" placeholder="Enter Location">
+                    <label class="err" *ngIf="(addformcontrols.location.touched || isSB) && addformcontrols.location.errors">Location is Required</label>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="specialization" class="form-label">Specialization</label>
+                    <input type="text" class="form-control" id="specialization" formControlName="specialization" placeholder="Enter Specialization">
+                    <label class="err" *ngIf="(addformcontrols.specialization.touched || isSB) && addformcontrols.specialization.errors">Specialization is Required</label>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="contact_number" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contact_number" formControlName="contact_number" placeholder="Enter Contact Number">
+                    <label class="err" *ngIf="(addformcontrols.contact_number.touched || isSB) && addformcontrols.contact_number.errors">Contact Number is Required</label>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" class="form-control" id="description" formControlName="description" placeholder="Enter Description"></textarea>
+                    <label class="err" *ngIf="(addformcontrols.description.touched || isSB) && addformcontrols.description.errors">Description is Required</label>
+                </div>
+                <div class="mb-3 mt-3 text-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
